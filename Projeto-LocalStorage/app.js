@@ -29,6 +29,7 @@ function preencherTabela(produtos) {
       <td>${p.categoria}</td>
       <td>${p.estoque}</td>
       <td>${p.ativo ? 'Sim' : 'Não'}</td>
+      <td>${p.autor}</td>
       <td>
         <span class="acao">
           <button onclick="aoEditar(${p.id})">Editar</button>

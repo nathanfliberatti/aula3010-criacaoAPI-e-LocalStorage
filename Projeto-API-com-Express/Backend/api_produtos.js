@@ -9,11 +9,11 @@ app.use(express.json());
 // "Banco" em memória
 let proximoId = 6;
 let produtos = [
-  { id: 1, nome: 'Teclado', preco: 120.90, categoria: 'Periféricos', estoque: 15, ativo: true },
-  { id: 2, nome: 'Mouse', preco: 79.50, categoria: 'Periféricos', estoque: 40, ativo: true },
-  { id: 3, nome: 'Monitor 24"', preco: 899.00, categoria: 'Monitores', estoque: 10, ativo: true },
-  { id: 4, nome: 'Cabo HDMI', preco: 35.00, categoria: 'Acessórios', estoque: 100, ativo: true },
-  { id: 5, nome: 'Notebook', preco: 4299.90, categoria: 'Computadores', estoque: 5, ativo: false }
+  { id: 1, nome: 'Teclado', preco: 120.90, categoria: 'Periféricos', estoque: 15, ativo: true, autor: "Nathan Liberatti - RM123456"},
+  { id: 2, nome: 'Mouse', preco: 79.50, categoria: 'Periféricos', estoque: 40, ativo: true, autor: "Nathan Liberatti - RM123456" },
+  { id: 3, nome: 'Monitor 24"', preco: 899.00, categoria: 'Monitores', estoque: 10, ativo: true, autor: "Nathan Liberatti - RM123456" },
+  { id: 4, nome: 'Cabo HDMI', preco: 35.00, categoria: 'Acessórios', estoque: 100, ativo: true, autor: "Nathan Liberatti - RM123456" },
+  { id: 5, nome: 'Notebook', preco: 4299.90, categoria: 'Computadores', estoque: 5, ativo: false, autor: "Nathan Liberatti - RM123456" }
 ];
 
 
@@ -38,7 +38,8 @@ function cadastrarProduto(dados) {
     preco: Number(dados.preco),
     categoria: String(dados.categoria).trim(),
     estoque: Number(dados.estoque),
-    ativo: Boolean(dados.ativo)
+    ativo: Boolean(dados.ativo),
+    autor: "Nathan Liberatti - RM123456"
   };
   produtos.push(novo);
   return novo;
